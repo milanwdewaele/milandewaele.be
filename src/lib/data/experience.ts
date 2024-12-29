@@ -1,6 +1,6 @@
 import Assets from './assets';
 import { getSkills } from './skills';
-import { ContractType, type Experience, type Link } from './types';
+import { ContractType, type Experience } from './types';
 
 const title = 'Experience';
 
@@ -36,7 +36,7 @@ const items: Array<Experience> = [
 		shortDescription: 'A community radio station.'
 	},
 	{
-		slug: 'findradios',
+		slug: 'findradio',
 		company: 'FindRadios',
 		description: 'Website to vote and checkout radios online.',
 		contract: ContractType.CommunityProject,
