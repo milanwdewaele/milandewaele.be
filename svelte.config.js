@@ -1,7 +1,7 @@
 import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-const base = '/slick-portfolio-svelte-5';
+const base = '';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
