@@ -1,55 +1,55 @@
 import Assets from './assets';
 import { getSkills } from './skills';
-import { ContractType, type Experience } from './types';
+import { ContractType, type Experience, type Link } from './types';
 
 const title = 'Experience';
 
 const items: Array<Experience> = [
 	{
-		slug: 'open-sourcer',
-		company: 'Self-employed',
-		description: 'Creating awesome tools for developers.',
+		slug: 'harmony',
+		company: 'Harmony Radio',
+		description: 'A community radio station powered by AzuraCast.',
 		contract: ContractType.SelfEmployed,
 		type: 'Software Development',
 		location: 'Home',
-		period: { from: new Date() },
-		skills: getSkills('ts', 'js'),
-		name: 'Open Source Developer',
-		color: 'red',
-		links: [],
-		logo: Assets.Unknown,
-		shortDescription: 'Creating awesome tools for developers.'
-	},
-	{
-		slug: 'software-freelance',
-		company: 'Self-employed',
-		description: 'Creating awesome applications for customers.',
-		contract: ContractType.Freelance,
-		type: 'Software Development',
-		location: 'Home',
-		period: { from: new Date() },
-		skills: getSkills('svelte', 'ts', 'sass', 'css', 'html', 'js'),
-		name: 'Freelancer',
+		period: { from: new Date('2021-01-13'), to: new Date('2023-08-23') },
+		skills: getSkills('expressjs', 'js', "nodejs", "mdb", "css"),
+		name: 'Head of Development & Founder',
 		color: 'blue',
 		links: [],
 		logo: Assets.Unknown,
-		shortDescription: 'Creating awesome applications for customers.'
+		shortDescription: 'My own community radio station.'
 	},
 	{
-		slug: 'software-freelance-junior',
-		company: 'Self-employed',
-		description: 'Creating awesome applications for customers.',
-		contract: ContractType.Freelance,
+		slug: 'upbeat',
+		company: 'UpBeat Radio',
+		description: 'A community radio station powered by AzuraCast.',
+		contract: ContractType.CommunityProject,
 		type: 'Software Development',
 		location: 'Home',
-		period: { from: new Date(2022, 0, 1), to: new Date() },
-		skills: getSkills('css', 'html', 'js'),
-		name: 'Junior Freelancer',
-		color: 'green',
+		period: { from: new Date('2023-08-23'), to: new Date('2023-12-21') },
+		skills: getSkills('tailwind', "css"),
+		name: 'UI & UX Developer',
+		color: 'purple',
 		links: [],
 		logo: Assets.Unknown,
-		shortDescription: 'Creating awesome applications for customers.'
-	}
+		shortDescription: 'A community radio station.'
+	},
+	{
+		slug: 'findradios',
+		company: 'FindRadios',
+		description: 'Website to vote and checkout radios online.',
+		contract: ContractType.CommunityProject,
+		type: 'Software Development',
+		location: 'Home',
+		period: { from: new Date('2023-02-11'), to: new Date('2023-04-02') },
+		skills: getSkills('tailwind', "css"),
+		name: 'Developer',
+		color: 'gray',
+		links: [],
+		logo: Assets.Unknown,
+		shortDescription: 'Website to vote and checkout radios online.'
+	},
 ];
 
 const ExperienceData = { title, items };
