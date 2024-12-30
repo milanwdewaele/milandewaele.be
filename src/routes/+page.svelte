@@ -36,7 +36,7 @@
 			class="h-[150px] w-[150px] rounded-md max-md:mt-14"
 			alt="avatar"
 		/>
-		<div class="flex flex-col items-center justify-center gap-4 text-left md:items-start">
+		<div class="flex flex-col items-center justify-center text-center gap-4 text-left md:items-start">
 			<H1>{HomeData.hero.title}</H1>
 			<Muted>{HomeData.hero.description}</Muted>
 			<div class="flex flex-row gap-1">
