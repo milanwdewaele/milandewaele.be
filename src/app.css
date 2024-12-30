@@ -62,14 +62,35 @@ body {
 	}
 }
 
+.glowingImage {
+	position: fixed;
+	bottom: -75px;
+	left: 0vw;
+	width: 100vw;
+	height: 150px;
+	filter: blur(75px) brightness(1);
+	overflow: hidden;
+	animation: fadeIn 3s ease forwards;
+}
+
+.glowingImage img {
+	width: 100vw;
+	height: 100px;
+	object-fit: fill;
+}
+
+
+
 .fadeIn {
 	animation: fadeIn 0.3s ease forwards;
 }
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
+		transform: translateY(10px);
 	}
 	100% {
 		opacity: 1;
+		transform: translateX(0);
 	}
 }

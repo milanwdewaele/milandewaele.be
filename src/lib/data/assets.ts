@@ -52,6 +52,7 @@ const Assets = {
 	Angular: asset('angular.png'),
 	PostgreSQL: asset('postgres.png'),
 	Harmony: asset('harmony.png'),
+	HarmonyAnim: asset('harmony.gif'),
 	Firebase: asset('firebase.png'),
 	Sass: asset('sass.png'),
 	Unknown: asset('no-img.svg'),
@@ -65,11 +66,13 @@ const Assets = {
 	AfterEffects: asset('after-effects.svg'),
 	Illustrator: asset('illustrator.svg'),
 	Nuxt: asset('nuxt.png'),
+	FindRadios: asset('fr.png'),
 	Vite: asset('vite.png'),
 	Vitest: asset('vitest.svg'),
 	Jest: asset('jest.png'),
 	Unocss: asset('unocss.svg'),
 	Ruvy: asset('ruvy.svg'),
+	UpBeat: asset('ub.jpeg'),
 	Postcss: asset('postcss.svg')
 };
 

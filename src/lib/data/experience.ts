@@ -17,7 +17,7 @@ const items: Array<Experience> = [
 		name: 'Head of Development & Founder',
 		color: 'blue',
 		links: [],
-		logo: Assets.Harmony,
+		logo: Assets.HarmonyAnim,
 		shortDescription: 'My own community radio station.'
 	},
 	{
@@ -32,7 +32,7 @@ const items: Array<Experience> = [
 		name: 'UI & UX Developer',
 		color: 'purple',
 		links: [],
-		logo: Assets.Unknown,
+		logo: Assets.UpBeat,
 		shortDescription: 'A community radio station.'
 	},
 	{
@@ -47,7 +47,7 @@ const items: Array<Experience> = [
 		name: 'Developer',
 		color: 'gray',
 		links: [],
-		logo: Assets.Unknown,
+		logo: Assets.FindRadios,
 		shortDescription: 'Website to vote and checkout radios online.'
 	},
 ];

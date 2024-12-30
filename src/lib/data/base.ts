@@ -1,6 +1,6 @@
 const firstName = 'Milan';
 const lastName = 'Dewaele';
-const suffix = 'Developer from Bruges, Belgium.';
+const suffix = 'Ready to take on anything.';
 
 const BaseData = {
 	firstName,

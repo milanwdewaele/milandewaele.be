@@ -30,17 +30,13 @@
 
 <Title title={HomeData.title} />
 <ResponsiveContainer className="flex flex-col justify-center items-center flex-1">
-	<div
-		class="flex flex-1 flex-col items-center  gap-8 px-14 md:flex-row "
-	>
+	<div class="flex flex-1 flex-col items-center gap-8 px-14 md:flex-row">
 		<img
 			src="https://avatars.githubusercontent.com/u/67167142?v=4"
 			class="h-[150px] w-[150px] rounded-md max-md:mt-14"
 			alt="avatar"
 		/>
-		<div
-			class="flex flex-col items-center justify-center gap-4 md:items-start text-left"
-		>
+		<div class="flex flex-col items-center justify-center gap-4 text-left md:items-start">
 			<H1>{HomeData.hero.title}</H1>
 			<Muted>{HomeData.hero.description}</Muted>
 			<div class="flex flex-row gap-1">
@@ -82,3 +78,7 @@
 		</div> -->
 	</div>
 </ResponsiveContainer>
+
+<div class="glowingImage">
+	<img src="https://avatars.githubusercontent.com/u/67167142?v=4" alt="gradient" />
+</div>
