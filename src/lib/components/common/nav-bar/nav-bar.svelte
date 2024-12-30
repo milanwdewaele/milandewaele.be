@@ -66,6 +66,11 @@
 		<Button variant="ghost" class="text-xl" on:click={toggleMode}>
 			<Icon icon={isDarkMode ? 'i-carbon-moon' : 'i-carbon-sun'} />
 		</Button>
+		<a href={href('https://intern.milandewaele.be/')}>
+			<Button variant="ghost" class="text-xl">
+				<Icon icon="i-carbon-launch" />
+			</Button>
+		</a>
 	</div>
 
 	<!-- sm -->
@@ -114,6 +119,15 @@
 						<Icon icon={isDarkMode ? 'i-carbon-moon' : 'i-carbon-sun'} className="text-xl" />
 						<div>{isDarkMode ? 'Dark' : 'Light'}</div>
 					</Button>
+					<Separator />
+					<DialogClose>
+						<a href={href('https://intern.milandewaele.be/')} class="w-full">
+							<Button class="flex w-full flex-row items-center justify-start gap-2" variant="ghost">
+								<Icon icon="i-carbon-launch" className="text-xl" />
+								<div>Intern</div>
+							</Button>
+						</a>
+					</DialogClose>
 				</div>
 				<DialogFooter class="items-end">
 					<DialogClose>

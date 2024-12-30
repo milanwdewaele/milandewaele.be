@@ -11,7 +11,7 @@ const items: Array<Project> = [
 		shortDescription:
 			"Radio player with profiles, shop, news and more.",
 		links: [{ to: 'https://weareharmony.net/app/', label: 'Website (unreachable)' }],
-		logo: Assets.Harmony,
+		logo: Assets.HarmonyAnim,
 		name: 'Harmony: Version 2',
 		period: {
 			from: new Date("2022-11-03"),
@@ -19,16 +19,16 @@ const items: Array<Project> = [
 		},
 		skills: getSkills('nodejs', 'expressjs', 'mdb', 'css', 'tailwind'),
 		type: 'Radio player & platform',
-		screenshots: [{ src: 'https://mdwnetcdn.s3.us-east-1.amazonaws.com/image.webp', label: "Image"}, { src: 'https://mdwnetcdn.s3.us-east-1.amazonaws.com/image-2.webp', label: "Image"}]
+		screenshots: [{ src: 'https://mdwnetcdn.s3.us-east-1.amazonaws.com/image.webp', label: "Song profile"}, { src: 'https://mdwnetcdn.s3.us-east-1.amazonaws.com/image-2.webp', label: "Homepage"}, { src: 'https://mdwnetcdn.s3.us-east-1.amazonaws.com/unknown.webp', label: "Article page"}, { src: 'https://mdwnetcdn.s3.us-east-1.amazonaws.com/unknown2.webp', label: "BETA homepage"}]
 	},
 	{
 		slug: 'postit',
-		color: '#fffff',
+		color: 'yellow',
 		description:
 			"Social media concept based on Instagram's infinite scrolling feed. Supported text, images and video's.",
 		shortDescription:
 			"Social media concept based on Instagram's infinite scrolling feed.",
-		links: [{ to: 'https://github.com/milanwdewaele/PostIt', label: 'GitHub' }],
+		links: [{ to: 'https://github.com/milanwdewaele/PostIt', label: 'GitHub' }, { to: 'http://postit.playground.milandewaele.be/', label: 'Website' }],
 		logo: Assets.ExpressJs,
 		name: 'PostIt',
 		period: {
@@ -38,6 +38,24 @@ const items: Array<Project> = [
 		skills: getSkills('nodejs', 'expressjs', 'mdb', 'css'),
 		type: 'Social platform',
 		screenshots: []
+	},
+	{
+		slug: 'gia',
+		color: '#009EDF',
+		description:
+			"Page that makes use of the data.gent.stad API that randomly selects and displays street art, geolocating each piece and providing hyperlinks to additional information.",
+		shortDescription:
+			"Page that makes use of the data.gent.stad API.",
+		links: [{ to: 'https://github.com/milanwdewaele/gentiskunst', label: 'GitHub' }, { to: 'http://gentiskunst.playground.milandewaele.be/', label: 'Website' }],
+		logo: Assets.HTML,
+		name: 'Gent is Art',
+		period: {
+			from: new Date("2024-09-04"),
+			to: new Date("2024-09-04")
+		},
+		skills: getSkills('html', 'css', "js"),
+		type: 'API testing',
+		screenshots: [{ src: 'https://mdwnetcdn.s3.us-east-1.amazonaws.com/Screenshot_1.png', label: "Sample"}]
 	},
 ];
 

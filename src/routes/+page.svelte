@@ -30,7 +30,7 @@
 
 <Title title={HomeData.title} />
 <ResponsiveContainer className="flex flex-col justify-center items-center flex-1">
-	<div class="flex flex-1 flex-col items-center gap-8 px-14 md:flex-row">
+	<div class="flex flex-1 flex-col items-center gap-8 px-14 md:flex-row fadeIn">
 		<img
 			src="https://avatars.githubusercontent.com/u/67167142?v=4"
 			class="h-[150px] w-[150px] rounded-md max-md:mt-14"
