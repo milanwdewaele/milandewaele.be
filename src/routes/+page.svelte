@@ -29,12 +29,17 @@
 </script>
 
 <Title title={HomeData.title} />
-<ResponsiveContainer className="flex flex-col justify-center flex-1">
+<ResponsiveContainer className="flex flex-col justify-center items-center flex-1">
 	<div
-		class="flex flex-1 flex-col items-center justify-center gap-8 px-14 md:flex-row md:justify-between"
+		class="flex flex-1 flex-col items-center  gap-8 px-14 md:flex-row "
 	>
+		<img
+			src="https://avatars.githubusercontent.com/u/67167142?v=4"
+			class="h-[150px] w-[150px] rounded-md max-md:mt-14"
+			alt="avatar"
+		/>
 		<div
-			class="flex flex-col items-center justify-center gap-4 text-center md:items-start md:text-left"
+			class="flex flex-col items-center justify-center gap-4 md:items-start text-left"
 		>
 			<H1>{HomeData.hero.title}</H1>
 			<Muted>{HomeData.hero.description}</Muted>
@@ -53,8 +58,8 @@
 				{/each}
 			</div>
 		</div>
-		<div>
-			<Carousel bind:api class="w-[200px] md:ml-14" opts={{ loop: true }}>
+		<!-- <div>
+			<Carousel bind:api class="w-[200px] ml-14" opts={{ loop: true }}>
 				<CarouselContent>
 					{#each HomeData.carousel as item}
 						<CarouselItem class="flex flex-col items-center justify-center gap-4">
@@ -74,6 +79,6 @@
 				<CarouselNext />
 				<CarouselPrevious />
 			</Carousel>
-		</div>
+		</div> -->
 	</div>
 </ResponsiveContainer>

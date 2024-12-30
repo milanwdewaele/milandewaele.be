@@ -51,6 +51,7 @@ const Assets = {
 	Android: asset('android.png'),
 	Angular: asset('angular.png'),
 	PostgreSQL: asset('postgres.png'),
+	Harmony: asset('harmony.png'),
 	Firebase: asset('firebase.png'),
 	Sass: asset('sass.png'),
 	Unknown: asset('no-img.svg'),

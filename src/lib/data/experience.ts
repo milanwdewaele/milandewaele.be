@@ -17,7 +17,7 @@ const items: Array<Experience> = [
 		name: 'Head of Development & Founder',
 		color: 'blue',
 		links: [],
-		logo: Assets.Unknown,
+		logo: Assets.Harmony,
 		shortDescription: 'My own community radio station.'
 	},
 	{
