@@ -73,7 +73,9 @@ const Assets = {
 	Unocss: asset('unocss.svg'),
 	Ruvy: asset('ruvy.svg'),
 	UpBeat: asset('ub.jpeg'),
-	Postcss: asset('postcss.svg')
+	Postcss: asset('postcss.svg'),
+	MDmono: asset('mdwit.png', 'mdzwart.png'),
+	MDblauw: asset('mdprim.png')
 };
 
 export default Assets;

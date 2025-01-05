@@ -29,7 +29,6 @@
 		<a href={href('/')} class="flex flex-row items-center justify-start gap-2 text-2xl">
 			<Tooltip>
 				<TooltipTrigger>
-					<Icon icon={NavBarData.left.icon} />
 				</TooltipTrigger>
 				<TooltipContent side="bottom" class="lg:hidden">
 					{NavBarData.left.title}
