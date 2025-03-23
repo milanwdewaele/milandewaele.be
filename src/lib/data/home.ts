@@ -11,7 +11,7 @@ const hero: {
 } = {
 	title: `${BaseData.fullName}`,
 	description:
-		'Ready to take on anything.',
+		'Well, you must have tried everything once, right?',
 	links: [
 		{ label: 'GitHub', href: 'https://github.com/milanwdewaele', icon: 'i-carbon-logo-github' },
 		{ label: 'Instagram', href: 'https://instagram.com/milanwdewaele', icon: 'i-carbon-logo-instagram' },

@@ -1,6 +1,6 @@
 const firstName = 'Milan';
 const lastName = 'Dewaele';
-const suffix = 'Ready to take on anything.';
+const suffix = 'Well, you must have tried everything once, right?';
 
 const BaseData = {
 	firstName,
