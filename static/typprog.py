@@ -42,7 +42,7 @@ class ModerneTypSimulator:
         
     def setup_window(self):
         """Configureer hoofdvenster eigenschappen"""
-        self.root.title("Moderne Typ Simulator")
+        self.root.title("Typpie")
         self.root.geometry("850x650")
         self.root.minsize(650, 550)
         self.root.attributes('-topmost', True)
