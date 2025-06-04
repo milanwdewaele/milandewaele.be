@@ -1,84 +1,204 @@
-<script lang="ts">
-	import Title from '$lib/components/common/title/title.svelte';
-	import Button from '$lib/components/ui/button/button.svelte';
-	import CarouselContent from '$lib/components/ui/carousel/carousel-content.svelte';
-	import CarouselItem from '$lib/components/ui/carousel/carousel-item.svelte';
-	import CarouselNext from '$lib/components/ui/carousel/carousel-next.svelte';
-	import CarouselPrevious from '$lib/components/ui/carousel/carousel-previous.svelte';
-	import Carousel from '$lib/components/ui/carousel/carousel.svelte';
-	import Icon from '$lib/components/ui/icon/icon.svelte';
-	import ResponsiveContainer from '$lib/components/ui/responsive-container/responsive-container.svelte';
-	import { Tooltip, TooltipContent, TooltipTrigger } from '$lib/components/ui/tooltip';
-	import H1 from '$lib/components/ui/typography/h1.svelte';
-	import Muted from '$lib/components/ui/typography/muted.svelte';
-	import HomeData from '$lib/data/home';
-	import { href } from '$lib/utils';
-	import { mode } from 'mode-watcher';
-	import { type CarouselAPI } from '$lib/components/ui/carousel/context.js';
-	import { onMount } from 'svelte';
-
-	let api: CarouselAPI;
-
-	onMount(() => {
-		setInterval(() => {
-			if (!api) return;
-
-			api.scrollNext();
-		}, 2000);
-	});
+<script>
+	import BlurFade from '$lib/components/magic/BlurFade.svelte';
+	import HackathonCard from '$lib/components/portfolio/HackathonCard.svelte';
+	import ProjectCard from '$lib/components/portfolio/ProjectCard.svelte';
+	import ResumeCard from '$lib/components/portfolio/ResumeCard.svelte';
+	import * as Avatar from '$lib/components/ui/avatar';
+	import Badge from '$lib/components/ui/badge/badge.svelte';
+	import { DATA } from '$lib/data/resume';
+	import { marked } from 'marked';
+	let BLUR_FADE_DELAY = 0.04;
 </script>
 
-<Title title={HomeData.title} />
-<ResponsiveContainer className="flex flex-col justify-center items-center flex-1">
-	<div class="flex flex-1 flex-col items-center gap-8 px-14 md:flex-row fadeIn">
-		<img
-			src="https://avatars.githubusercontent.com/u/67167142?v=4"
-			class="h-[150px] w-[150px] rounded-md max-md:mt-14"
-			alt="avatar"
-		/>
-		<div class="flex flex-col items-center justify-center text-center gap-4 text-left md:items-start">
-			<H1>{HomeData.hero.title}</H1>
-			<Muted>{HomeData.hero.description}</Muted>
-			<div class="flex flex-row gap-1">
-				{#each HomeData.hero.links as item}
-					<a href={item.href} target="_blank">
-						<Tooltip>
-							<TooltipTrigger>
-								<Button variant="outline" size="icon">
-									<Icon icon={item.icon} className="text-lg" />
-								</Button>
-							</TooltipTrigger>
-							<TooltipContent side="bottom">{item.label}</TooltipContent>
-						</Tooltip>
-					</a>
+<svelte:head>
+	<title>{DATA.name}</title>
+	<meta name="description" content={DATA.description} />
+	<meta property="og:title" content={DATA.name} />
+	<meta property="og:description" content={DATA.description} />
+	<meta property="og:url" content={DATA.url} />
+	<meta property="og:site_name" content={DATA.name} />
+	<meta property="og:image" content={DATA.img} />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta name="robots" content="index, follow" />
+	<meta
+		name="googlebot"
+		content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+	/>
+	<meta name="twitter:title" content={DATA.name} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content={DATA.img} />
+	<meta name="twitter:description" content={DATA.description} />
+
+	<meta name="google-site-verification" content="your-google-verification-code" />
+	<meta name="yandex-verification" content="your-yandex-verification-code" />
+</svelte:head>
+<main class="flex min-h-[100dvh] flex-col space-y-10">
+	<section id="hero">
+		<div class="mx-auto w-full max-w-2xl space-y-8">
+			<div class="flex justify-between gap-2">
+				<div class="flex flex-1 flex-col space-y-1.5">
+					<BlurFade
+						delay={BLUR_FADE_DELAY}
+						class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+						yOffset={8}>Hallo, I'm Milan 👋</BlurFade
+					>
+					<BlurFade class="max-w-[600px] md:text-xl italic text-neutral-500" delay={BLUR_FADE_DELAY}
+						>"Well, you must have tried everything once, right?"</BlurFade
+					>
+				</div>
+				<BlurFade delay={BLUR_FADE_DELAY}>
+					<Avatar.Root class="size-28 border">
+						<Avatar.Image alt={DATA.name} src={DATA.avatarUrl} />
+						<Avatar.Fallback>{DATA.initials}</Avatar.Fallback>
+					</Avatar.Root>
+				</BlurFade>
+			</div>
+		</div>
+	</section>
+	<section id="about">
+		<BlurFade delay={BLUR_FADE_DELAY}>
+			<h2 class="text-xl font-bold">About</h2>
+		</BlurFade>
+		<BlurFade delay={BLUR_FADE_DELAY * 1.4}>
+			<div
+				class="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert"
+			>
+				{@html marked(DATA.summary)}
+			</div>
+		</BlurFade>
+	</section>
+	<section id="work">
+		<div class="flex min-h-0 flex-col gap-y-3">
+			<BlurFade delay={BLUR_FADE_DELAY}>
+				<h2 class="text-xl font-bold">Work Experience</h2>
+			</BlurFade>
+			{#each DATA.work as work, id}
+				<BlurFade delay={BLUR_FADE_DELAY * 1.2 + id * 0.05}>
+					<ResumeCard {...work} />
+				</BlurFade>
+			{/each}
+		</div>
+	</section>
+	<section id="education">
+		<div class="flex min-h-0 flex-col gap-y-3">
+			<BlurFade delay={BLUR_FADE_DELAY}>
+				<h2 class="text-xl font-bold">Education</h2>
+			</BlurFade>
+			{#each DATA.education as edu, id}
+				<BlurFade delay={BLUR_FADE_DELAY * 1.2 + id * 0.05}>
+					<ResumeCard
+						href={edu.href}
+						logoUrl={edu.logoUrl}
+						company={edu.school}
+						title={edu.degree}
+						subtitle={edu.degree}
+						start={edu.start}
+						end={edu.end}
+					/>
+				</BlurFade>
+			{/each}
+		</div>
+	</section>
+	<section id="skills">
+		<div class="flex min-h-0 flex-col gap-y-3">
+			<BlurFade delay={BLUR_FADE_DELAY}>
+				<h2 class="text-xl font-bold">Skills</h2>
+			</BlurFade>
+			<div class="flex flex-wrap gap-1">
+				{#each DATA.skills as skill, id}
+					<BlurFade delay={BLUR_FADE_DELAY * id + 0.002}>
+						<Badge>{skill}</Badge>
+					</BlurFade>
 				{/each}
 			</div>
 		</div>
-		<!-- <div>
-			<Carousel bind:api class="w-[200px] ml-14" opts={{ loop: true }}>
-				<CarouselContent>
-					{#each HomeData.carousel as item}
-						<CarouselItem class="flex flex-col items-center justify-center gap-4">
-							<img
-								src={$mode === 'dark' ? item.logo.dark : item.logo.light}
-								class="h-[150px] w-[150px]"
-								alt={item.name}
-							/>
-							<a href={href(`/skills/${item.slug}`)}>
-								<Button variant="ghost">
-									{item.name}
-								</Button>
-							</a>
-						</CarouselItem>
+	</section>
+	<section id="projects">
+		<div class="w-full space-y-12 py-12">
+			<BlurFade delay={BLUR_FADE_DELAY}>
+				<div class="flex flex-col items-center justify-center space-y-4 text-center">
+					<div class="space-y-2">
+						<div class="inline-block rounded-lg bg-foreground px-3 py-1 text-sm text-background">
+							My Projects
+						</div>
+						<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">
+							Check out my latest work
+						</h2>
+						<p
+							class="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+						>
+							I&apos;ve worked on a variety of projects, from simple websites to complex web
+							applications. Here are a few of my favorites.
+						</p>
+					</div>
+				</div>
+			</BlurFade>
+			<div class="mx-auto grid max-w-[800px] grid-cols-1 gap-3 sm:grid-cols-2">
+				{#each DATA.projects as project, id}
+					<BlurFade delay={BLUR_FADE_DELAY * 1.5 + id * 0.05}>
+						<ProjectCard
+							href={project.href}
+							title={project.title}
+							description={project.description}
+							dates={project.dates}
+							tags={project.technologies}
+							image={project.image}
+							video={project.video}
+							links={project.links}
+						/>
+					</BlurFade>
+				{/each}
+			</div>
+		</div>
+	</section>
+	<section id="hackathons" style="display: none;">
+		<div class="w-full space-y-12 py-12">
+			<BlurFade delay={BLUR_FADE_DELAY}>
+				<div class="flex flex-col items-center justify-center space-y-4 text-center">
+					<div class="space-y-2">
+						<div class="inline-block rounded-lg bg-foreground px-3 py-1 text-sm text-background">
+							Hackathons
+						</div>
+						<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">I like building things</h2>
+						<p
+							class="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+						>
+							During my time in university, I attended{' '}
+							{DATA.hackathons.length}+ hackathons. People from around the country would come
+							together and build incredible things in 2-3 days. It was eye-opening to see the
+							endless possibilities brought to life by a group of motivated and passionate
+							individuals.
+						</p>
+					</div>
+				</div>
+			</BlurFade>
+			<BlurFade delay={BLUR_FADE_DELAY * 2}>
+				<ul class="mb-4 ml-4 divide-y divide-dashed border-l">
+					{#each DATA.hackathons as project}
+						<BlurFade delay={BLUR_FADE_DELAY}>
+							<HackathonCard {...project} />
+						</BlurFade>
 					{/each}
-				</CarouselContent>
-				<CarouselNext />
-				<CarouselPrevious />
-			</Carousel>
-		</div> -->
-	</div>
-</ResponsiveContainer>
-
-<div class="glowingImage">
-	<img src="https://avatars.githubusercontent.com/u/67167142?v=4" alt="gradient" />
-</div>
+				</ul>
+			</BlurFade>
+		</div>
+	</section>
+	<section id="contact">
+		<div class="grid w-full items-center justify-center gap-4 px-4 py-12 text-center md:px-6">
+			<BlurFade delay={BLUR_FADE_DELAY * 2}>
+				<div class="space-y-3">
+					<div class="inline-block rounded-lg bg-foreground px-3 py-1 text-sm text-background">
+						Contact
+					</div>
+					<h2 class="text-3xl font-bold tracking-tight sm:text-5xl">Get in Touch</h2>
+					<p
+						class="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+					>
+						Want to chat? Just send me an email <a class="text-blue-500 hover:underline" href="mailto:hallo@milandewaele.me">here</a>. You can also find me on various social media platforms. I&apos;m always open to discussing new projects, ideas, or just having a friendly conversation.
+					</p>
+				</div>
+			</BlurFade>
+		</div>
+	</section>
+</main>

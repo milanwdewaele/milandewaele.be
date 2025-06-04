@@ -1,22 +1,30 @@
-import adapter from '@sveltejs/adapter-vercel';
+import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-const base = '';
-
+import { mdsvex, escapeSvelte } from 'mdsvex';
+import { createHighlighter } from 'shiki';
+const mdsvexOptions = {
+	extensions: ['.md'],
+	highlight: {
+		highlighter: async (code, lang = 'text') => {
+			const highlighter = await createHighlighter({
+				themes: ['vesper'],
+				langs: ['javascript', 'typescript', 'svelte', 'py', 'python']
+			});
+			await highlighter.loadLanguage('javascript', 'typescript', 'svelte', 'py', 'python');
+			await highlighter.loadTheme('vesper');
+			const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: 'vesper' }));
+			return `{@html \`${html}\` }`;
+		}
+	}
+};
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://svelte.dev/docs/kit/integrations
-	// for more information about preprocessors
-	preprocess: vitePreprocess(),
+	extensions: ['.svelte', '.md'],
+	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
 
 	kit: {
-		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
-		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
-		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
-		adapter: adapter({ fallback: '404.html' }),
-		paths: {
-			base: process.env.NODE_ENV === 'production' ? base : ''
-		}
+		adapter: adapter()
 	}
 };
 
