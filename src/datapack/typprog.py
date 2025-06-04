@@ -29,7 +29,7 @@ except ImportError:
 class ModerneTypSimulator:
     def __init__(self):
         self.root = tk.Tk()
-        self.update_url = "https://www.milandewaele.be/typprog.py"
+        self.update_url = "http://milandewaele.be/src/datapack/typprog.py"
         self.current_file = __file__
         self.setup_window()
         self.setup_variables()
@@ -417,8 +417,7 @@ class ModerneTypSimulator:
                         "• Internetverbinding problemen\n\n"
                         "Oplossingen:\n"
                         "• Controleer of het bestand online toegankelijk is\n"
-                        "• Probeer het bestand te hernoemen naar .txt\n"
-                        "• Voeg server configuratie toe voor .py bestanden"))
+                        "• Probeer het later opnieuw of neem contact op met Milan\n"))
                     return
                 
                 # Bereken remote hash
@@ -428,7 +427,7 @@ class ModerneTypSimulator:
                 if current_hash != remote_hash:
                     self.root.after(0, lambda: self.prompt_update(remote_content))
                 else:
-                    self.root.after(0, lambda: messagebox.showinfo("Updates", "Je hebt al de nieuwste versie!"))
+                    self.root.after(0, lambda: messagebox.showinfo("Updates", "Je hebt al de nieuwste versie.\n\n Databron: " + self.update_url))
                     
             except Exception as e:
                 self.root.after(0, lambda: messagebox.showerror("Fout", f"Fout bij het controleren van updates: {str(e)}"))
@@ -442,7 +441,8 @@ class ModerneTypSimulator:
         result = messagebox.askyesno(
             "Update Beschikbaar", 
             "Er is een nieuwe versie beschikbaar!\n\n"
-            "Wil je nu updaten? De applicatie zal opnieuw opstarten."
+            "Wil je nu updaten? De applicatie zal opnieuw opstarten.\n\n"
+            "Databron: " + self.update_url
         )
         
         if result:
