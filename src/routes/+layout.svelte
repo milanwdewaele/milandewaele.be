@@ -1,15 +1,12 @@
-<script lang="ts">
-	import NavBar from '$lib/components/common/nav-bar/nav-bar.svelte';
-	import 'virtual:uno.css';
+<script>
+	import Navbar from '$lib/components/portfolio/Navbar.svelte';
 	import '../app.css';
-	import '../markdown.css';
-	import { ModeWatcher } from 'mode-watcher';
-
-	let { children } = $props();
+	import { ModeWatcher, setMode } from 'mode-watcher';
+	setMode('dark');
 </script>
 
 <ModeWatcher />
-<div class="flex h-screen w-screen flex-col overflow-x-hidden">
-	<NavBar />
-	<div class="mt-[50px] flex flex-1 flex-col">{@render children()}</div>
+<div class="relative mx-auto min-h-screen max-w-2xl bg-background px-6 py-12 font-sans antialiased sm:py-24">
+	<slot></slot>
+	<Navbar />
 </div>
