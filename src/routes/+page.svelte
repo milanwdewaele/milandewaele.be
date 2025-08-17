@@ -197,8 +197,15 @@
 					>
 						Want to chat? Just send me an email <a class="text-blue-500 hover:underline" href="mailto:hallo@milandewaele.me">here</a>. You can also find me on various social media platforms. I&apos;m always open to discussing new projects, ideas, or just having a friendly conversation.
 					</p>
+
+					<p class="opacity-50 text-xs pt-5" id="pageTime"></p>
 				</div>
 			</BlurFade>
 		</div>
 	</section>
+
+
+	<script>
+        document.getElementById('pageTime').textContent = `Van infra0 naar client in ${performance.now()}ms`;
+    </script>
 </main>
