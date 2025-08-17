@@ -30,7 +30,7 @@ export let DATA = {
 	location: 'nvt',
 	locationLink: 'https://www.google.com/maps/place/mumbai',
 	description: 'nvt',
-	summary: 'pee is stored in the balls',
+	summary: 'I smash code and build cool stuff. That\'s what I do best.',
 	avatarUrl: 'https://avatars.githubusercontent.com/u/67167142?v=4',
 	skills: [
 		'JavaScript',
