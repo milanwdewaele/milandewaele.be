@@ -30,7 +30,7 @@ export let DATA = {
 	location: 'nvt',
 	locationLink: 'https://www.google.com/maps/place/mumbai',
 	description: 'nvt',
-	summary: 'pee is stored in the balls',
+	summary: 'I smash code and build cool stuff. That\'s what I do best.',
 	avatarUrl: 'https://avatars.githubusercontent.com/u/67167142?v=4',
 	skills: [
 		'JavaScript',
@@ -60,7 +60,7 @@ export let DATA = {
 			},
 			X: {
 				name: 'Instagram',
-				url: 'https://twitter.com/milanwdewaele',
+				url: 'https://instagram.com/milanwdewaele',
 				// // icon: Icons.x,
 				icon: InstagramSvg,
 				navbar: true,
@@ -68,7 +68,7 @@ export let DATA = {
 			},
 			email: {
 				name: 'Send Email',
-				url: 'mailto:hallo@milandewaele.me',
+				url: 'mailto:hallo@milandewaele.be',
 				// // icon: Icons.email,
 				icon: MailSvg,
 				navbar: true,
@@ -132,7 +132,7 @@ export let DATA = {
 			links: [],
 			image: '',
 			video:
-				'https://pouch.jumpshare.com/preview/mXQf_o76dU4lCLFvB7Ym4a7aZDbI7tXupu5uw6TIyvzpV-MJRjxpjeoL35Z_Bss8xmmi7ToIONksm5SlMpNYuSqrMaZ9mMraZfdGxd7OPcOgeUjSDOkjgGTO4YQybzpVeByboIdysgaIHctuGfTNTG6yjbN-I2pg_cnoHs_AmgI.mp4'
+				'https://mdwnetcdn.s3.us-east-1.amazonaws.com/2023-07-24_00-43-04(1).mp4'
 		},
 		{
 			title: 'Harmony: Version 2',
@@ -201,7 +201,7 @@ export let DATA = {
 				}
 			],
 			image:
-				'https://pouch.jumpshare.com/preview/cbjiVfqHwx8Hpug_rD1tRf3b1pPT6Ti-Ty5G6wdrVdUIaTJ3Jt5hvWrDO7KkyzldXL5_tgHUf8BHnAB5AS_AKbK8UfS_OB_lDAmeK510gAs',
+				'https://mdwnetcdn.s3.us-east-1.amazonaws.com/Screenshot_4.png',
 			video: ''
 		}
 	],

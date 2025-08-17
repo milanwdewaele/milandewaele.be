@@ -29,7 +29,7 @@ except ImportError:
 class ModerneTypSimulator:
     def __init__(self):
         self.root = tk.Tk()
-        self.update_url = "http://milandewaele.be/typprog.py"
+        self.update_url = "https://milandewaele.be/typprog.py"
         self.current_file = __file__
         self.setup_window()
         self.setup_variables()
