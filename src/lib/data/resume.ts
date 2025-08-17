@@ -44,7 +44,7 @@ export let DATA = {
 	],
 	navbar: [
 		{ href: '/', icon: HomeIcon, label: 'Home' },
-		{ href: 'https://intern.milandewaele.be/auth', icon: LogIn, label: 'Intern' }
+		{ href: 'https://infra1.milandewaele.be/', icon: LogIn, label: 'Infra1' }
 	],
 	contact: {
 		email: 'hello@example.com',
