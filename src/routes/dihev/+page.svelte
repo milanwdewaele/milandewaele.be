@@ -7,7 +7,7 @@
 	let minutes = 0;
 	let seconds = 0;
 
-	const startDate = new Date('2025-06-07T19:15:00');
+	const startDate = new Date('2025-07-05T19:15:00');
 
 	function updateCounter() {
 		const now = new Date();
