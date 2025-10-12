@@ -195,7 +195,7 @@
 					<p
 						class="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
 					>
-						Want to chat? Just send me an email <a class="text-blue-500 hover:underline" href="mailto:hallo@milandewaele.me">here</a>. You can also find me on various social media platforms. I&apos;m always open to discussing new projects, ideas, or just having a friendly conversation.
+						Want to chat? Just send me an email <a class="text-blue-500 hover:underline" href="mailto:sys@milandewaele.me">here</a>. You can also find me on various social media platforms. I&apos;m always open to discussing new projects, ideas, or just having a friendly conversation.
 					</p>
 
 					<p class="opacity-50 text-xs pt-5" id="pageTime"></p>
