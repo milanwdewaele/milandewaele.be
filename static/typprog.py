@@ -42,7 +42,7 @@ class ModerneTypSimulator:
         
     def setup_window(self):
         """Configureer hoofdvenster eigenschappen"""
-        self.root.title("Typpie")
+        self.root.title("Typpie van MiiNet")
         self.root.geometry("850x650")
         self.root.minsize(650, 550)
         self.root.attributes('-topmost', True)
