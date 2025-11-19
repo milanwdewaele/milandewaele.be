@@ -31,7 +31,7 @@ export let DATA = {
 	location: 'nvt',
 	locationLink: 'https://www.google.com/maps/place/mumbai',
 	description: 'nvt',
-	summary: 'I smash code and build cool stuff. That\'s what I do best.',
+	summary: "I'm a passionate developer with a keen interest in building web applications and exploring new technologies. I love to learn and take on new challenges, and I'm always looking for ways to improve my skills and knowledge. When I'm not coding, you can find me listening to music, playing video games, or spending time with friends and family.",
 	avatarUrl: 'https://avatars.githubusercontent.com/u/67167142?v=4',
 	skills: [
 		[
