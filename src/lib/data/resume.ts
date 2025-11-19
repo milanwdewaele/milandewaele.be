@@ -20,6 +20,7 @@ import WaterLooImg from '$lib/imgs/waterloo.png';
 import LaurierImg from '$lib/imgs/laurier.png';
 import IBImg from '$lib/imgs/ib.png';
 import VHSI from '$lib/imgs/vhsi.png';
+import HW from '$lib/imgs/hw.png';
 
 // Your resume data
 export let DATA = {
@@ -33,21 +34,24 @@ export let DATA = {
 	summary: 'I smash code and build cool stuff. That\'s what I do best.',
 	avatarUrl: 'https://avatars.githubusercontent.com/u/67167142?v=4',
 	skills: [
-		'JavaScript',
-		'Python',
-		'Svelte',
-		'SvelteKit',
-		'ExpressJS',
-		'NodeJS',
-		'MongoDB',
-		'Supabase'
+		[
+			"C#",
+			"ExpressJS",
+			"JavaScript",
+			"MongoDB",
+			"NodeJS",
+			"Python",
+			"SQL",
+			"Supabase",
+			"Svelte"
+		]
 	],
 	navbar: [
 		{ href: '/', icon: HomeIcon, label: 'Home' },
 		{ href: 'https://identity.miinet.cloud/', icon: LogIn, label: 'MiiNet Identity' }
 	],
 	contact: {
-		email: 'hello@example.com',
+		email: 'hallo@milandewaele.be',
 		tel: '+123456789',
 		social: {
 			GitHub: {
@@ -119,6 +123,14 @@ export let DATA = {
 			logoUrl: VHSI,
 			start: '2020',
 			end: '2025'
+		}
+		{
+			school: 'Howest',
+			href: 'https://howest.be',
+			degree: ' Computer Programming',
+			logoUrl: HW,
+			start: '2025',
+			end: '2027'
 		}
 	],
 	projects: [
