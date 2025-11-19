@@ -123,7 +123,7 @@ export let DATA = {
 			logoUrl: VHSI,
 			start: '2020',
 			end: '2025'
-		}
+		},
 		{
 			school: 'Howest',
 			href: 'https://howest.be',
