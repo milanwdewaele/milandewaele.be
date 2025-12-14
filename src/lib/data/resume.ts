@@ -11,7 +11,7 @@ import InstagramDarkSvg from '$lib/imgs/instagram-dark.svg';
 
 import AtomicImg from '$lib/imgs/atomic.png';
 import UB from '$lib/imgs/ub.png';
-import Harmony from '$lib/imgs/harmony.gif';
+import Harmony from '$lib/imgs/harmony.png';
 import FR from '$lib/imgs/fr.png';
 import LimeImg from '$lib/imgs/lime.svg';
 import MitreMediaImg from '$lib/imgs/mitremedia.png';
@@ -21,6 +21,7 @@ import LaurierImg from '$lib/imgs/laurier.png';
 import IBImg from '$lib/imgs/ib.png';
 import VHSI from '$lib/imgs/vhsi.png';
 import HW from '$lib/imgs/hw.png';
+import VV from '$lib/imgs/vives.jpg';
 
 // Your resume data
 export let DATA = {
@@ -28,10 +29,10 @@ export let DATA = {
 	initials: 'MD',
 	url: 'https://github.com/milanwdewaele',
 	img: 'https://avatars.githubusercontent.com/u/67167142?v=4',
-	location: 'nvt',
-	locationLink: 'https://www.google.com/maps/place/mumbai',
+	location: 'Bruges, Belgium',
+	locationLink: 'https://www.google.com/maps/place/Brugge',
 	description: 'nvt',
-	summary: "I'm a passionate developer with a keen interest in building web applications and exploring new technologies. I love to learn and take on new challenges, and I'm always looking for ways to improve my skills and knowledge. When I'm not coding, you can find me listening to music, playing video games, or spending time with friends and family.",
+	summary: "I’m a passionate programmer who loves building IoT projects that connect the digital and physical worlds. When I’m not coding, you’ll find me gaming or hanging out with friends.",
 	avatarUrl: 'https://avatars.githubusercontent.com/u/67167142?v=4',
 	skills: [
 		[
@@ -43,12 +44,13 @@ export let DATA = {
 			"Python",
 			"SQL",
 			"Supabase",
-			"Svelte"
+			"Svelte",
+			"Python"
 		]
 	],
 	navbar: [
 		{ href: '/', icon: HomeIcon, label: 'Home' },
-		{ href: 'https://identity.miinet.cloud/', icon: LogIn, label: 'MiiNet Identity' }
+		{ href: 'https://identity.miinet.cloud/', icon: LogIn, label: 'Miinet Identity' }
 	],
 	contact: {
 		email: 'hallo@milandewaele.be',
@@ -129,6 +131,14 @@ export let DATA = {
 			href: 'https://howest.be',
 			degree: ' Computer Programming',
 			logoUrl: HW,
+			start: '2025',
+			end: '2025'
+		},
+		{
+			school: 'Vives',
+			href: 'https://vives.be',
+			degree: ' Internet of Things',
+			logoUrl: VV,
 			start: '2025',
 			end: '2027'
 		}
